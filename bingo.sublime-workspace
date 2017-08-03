@@ -1,0 +1,413 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"reci",
+				"recipe_path\t(show.html.erb)"
+			],
+			[
+				"comme",
+				"comments\t(show.html.erb)"
+			],
+			[
+				"comm",
+				"comment\t(_comments.html.erb)"
+			],
+			[
+				"col",
+				"col-md-offset-2"
+			],
+			[
+				"cre",
+				"created_at\t(show.html.erb)"
+			],
+			[
+				"co",
+				"comment"
+			],
+			[
+				"come",
+				"comments"
+			],
+			[
+				"per",
+				"per_page"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"ing",
+				"ingredient"
+			],
+			[
+				"succe",
+				"successfully"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"li",
+				"li"
+			],
+			[
+				"recipe",
+				"recipe_ingredients"
+			],
+			[
+				"upd",
+				"updated_email"
+			],
+			[
+				"up",
+				"updated_email"
+			],
+			[
+				"upda",
+				"updated_name"
+			],
+			[
+				"admin",
+				"admin_user\t(chefs_listing_test.rb)"
+			],
+			[
+				"adm",
+				"admin_user"
+			],
+			[
+				"che",
+				"chef2"
+			],
+			[
+				"requi",
+				"require_admin"
+			],
+			[
+				"ch",
+				"chefs\t(chefs_controller.rb)"
+			],
+			[
+				"chef",
+				"chefs_path"
+			],
+			[
+				"fla",
+				"flash"
+			],
+			[
+				"ed",
+				"edit_chef_path\t(_navigation.html.erb)"
+			],
+			[
+				"login",
+				"login_path"
+			],
+			[
+				"logg",
+				"logged_in\t(_navigation.html.erb)"
+			],
+			[
+				"link",
+				"link_to"
+			],
+			[
+				"chef_",
+				"chef_path\t(chefs_controller.rb)"
+			],
+			[
+				"sess",
+				"sessions#new"
+			],
+			[
+				"chefs",
+				"chefs_path\t(chefs_listing_test.rb)"
+			],
+			[
+				"assert",
+				"assert_template"
+			],
+			[
+				"passw",
+				"password_confirmation\t(chefs_controller.rb)"
+			],
+			[
+				"lin",
+				"link_to"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"lis",
+				"list-style"
+			],
+			[
+				"asse",
+				"assert_match"
+			],
+			[
+				"col-md",
+				"col-md-offset-4\t(new.html.erb)"
+			],
+			[
+				"su",
+				"success\t(chefs_signup_test.rb)"
+			],
+			[
+				"pass",
+				"password_confirmation\t(chefs_signup_test.rb)"
+			],
+			[
+				"password",
+				"password_confirmation\t(new.html.erb)"
+			],
+			[
+				"sign",
+				"signup_path"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp64/www/hellophaser/index.html",
+		"/C/wamp64/www/firstphasergame/tutorial.html",
+		"/C/wamp64/www/firstphasergame/part9.html",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/recipes/show.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/controllers/comments_controller.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/models/comment.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/config/routes.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/controllers/recipes_controller.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/recipes/_recipe.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/comments/_comments.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/comments/_comment.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/recipes/_form.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/controllers/ingredients_controller.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/assets/stylesheets/custom.css.scss",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/ingredients/_form.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/ingredients/edit.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/ingredients/new.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/layouts/_navigation.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/ingredients/index.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/ingredients/_ingredient.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/ingredients/show.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/chefs/show.html.erb",
+		"/C/wamp64/www/firstphasergame/part8.html",
+		"/C/wamp64/www/firstphasergame/part1.html",
+		"/C/Phaser/phaser-ce/resources/tutorials/02 Making your first game/part1.html",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/assets/stylesheets/application.css",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/models/ingredient.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/models/recipe_ingredient.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/models/recipe.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/models/chef.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/db/migrate/20170714214516_create_comments.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/db/migrate/20170714180708_create_ingredients.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/db/migrate/20170714181356_create_recipe_ingredients.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/integration/chefs_edit_test.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/integration/chefs_listing_test.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/controllers/chefs_controller.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/chefs/index.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/recipes/index.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/db/migrate/20170705203400_rename_name_to_admin.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/db/migrate/20170705202754_add_admin_to_chefs.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/integration/recipes_test.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/sessions/new.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/integration/recipes_edit_test.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/controllers/application_controller.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/integration/recipes_delete_test.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/integration/chefs_login_test.rb",
+		"/C/Level Up/Ragnarok/OptionInfo.lua",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/test_helper.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/controllers/pages_controller.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/controllers/sessions_controller.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/helpers/application_helper.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/models/chef_test.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/Gemfile",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/chefs/_form.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/chefs/edit.html.erb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/chefs/new.html.erb",
+		"/C/Level Up/Ragnarok/AI/USER_AI/AI.lua",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/integration/chefs_show_test.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/test/integration/chefs_signup_test.rb",
+		"/C/Users/guilh/Projetos/RubyOnRails/guilhermerecipes/app/views/pages/home.html.erb"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Comment"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bingo.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

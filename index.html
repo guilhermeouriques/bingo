@@ -1,0 +1,74 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>B!NGO</title>
+    <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(768, 432, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+function preload() {
+    game.load.image('background', 'assets/background.jpg');
+    game.load.spritesheet('buttonPlaySpriteSheet', 'assets/btn_play_sprite_sheet.png', 100, 61);
+    game.load.spritesheet('ballsSpriteSheet', 'assets/balls_sprite_sheet.png', 44.5, 46);
+}
+
+var background;
+var buttonPlay;
+var ball;
+var ballsArray = new Array();
+var randomBallsArray = new Array();
+
+function create() {
+    console.log('FUNCTION CREATE');
+
+    background = game.add.sprite(0, 0, 'background');
+    background.width = game.width;
+    background.height = game.height;
+
+    buttonPlay = game.add.button(game.width/2 - 50, game.height - 61, 'buttonPlaySpriteSheet', startGameOnClick, this, 1, 0, 2);
+
+    ball = game.add.sprite(10, 10, 'ballsSpriteSheet');
+    ball.frame = 89;
+
+    for (var i = 0; i < 90; i++) {
+        ballsArray.push(i);
+    }
+}
+
+function startGameOnClick() {
+    console.log('BUTTON PLAY CLICKED!!!');
+
+    sortBalls();
+    buttonPlay.inputEnabled = false;
+}
+
+function sortBalls() {
+    for (var i = 0; i < 10; i++) {
+        var randomPosition = game.rnd.integerInRange(0, ballsArray.length - 1);
+        var thisNumber = ballsArray[randomPosition];
+        randomBallsArray.push(thisNumber);
+        var index = ballsArray.indexOf(thisNumber);
+        ballsArray.splice(index, 1);
+    }
+    console.log(randomBallsArray);
+    console.log(ballsArray);
+}
+
+function update() {
+    //console.log('FUNCTION UPDATE');
+}
+
+</script>
+
+</body>
+</html>
