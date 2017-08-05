@@ -4,16 +4,56 @@
 		"selected_items":
 		[
 			[
+				"sco",
+				"scoreStyle"
+			],
+			[
+				"center",
+				"centerX"
+			],
+			[
+				"min",
+				"minimumWinScore"
+			],
+			[
+				"cent",
+				"centerY"
+			],
+			[
+				"cen",
+				"centerY"
+			],
+			[
+				"cente",
+				"centerY"
+			],
+			[
+				"game",
+				"gameStarted"
+			],
+			[
+				"num",
+				"numberOfRandomBalls"
+			],
+			[
+				"console",
+				"console.log(\"TWEEN"
+			],
+			[
+				"font",
+				"foundStyle"
+			],
+			[
+				"fon",
+				"foundStyle"
+			],
+			[
 				"ball",
 				"balls"
 			],
 			[
 				"random",
 				"randomBallsArray"
-			],
-			[
-				"num",
-				"number"
 			],
 			[
 				"ran",
@@ -204,14 +244,6 @@
 				"link_to"
 			],
 			[
-				"font",
-				"font-size"
-			],
-			[
-				"fon",
-				"font-weight"
-			],
-			[
 				"lis",
 				"list-style"
 			],
@@ -247,16 +279,8 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 5353,
+				"buffer_size": 5582,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/wamp64/www/firstphasergame/part9.html",
-			"settings":
-			{
-				"buffer_size": 4362,
 				"line_ending": "Unix"
 			}
 		}
@@ -302,6 +326,7 @@
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/bingo/assets/balls_sprite_sheet.png",
 		"/C/wamp64/www/firstphasergame/part9.html",
 		"/C/wamp64/www/firstphasergame/part3.html",
 		"/C/wamp64/www/firstphasergame/part2.html",
@@ -411,15 +436,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5353,
+						"buffer_size": 5582,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5294,
-								5294
+								1693,
+								1693
 							]
 						],
 						"settings":
@@ -429,47 +454,11 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1890.0,
+						"translation.y": 450.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/wamp64/www/firstphasergame/part9.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4362,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1789,
-								1795
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 495.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"file": "assets/balls_sprite_sheet.png",
-					"semi_transient": false,
-					"stack_index": 1,
-					"type": "image"
 				}
 			]
 		}

@@ -27,6 +27,7 @@ const totalNumberOfBalls = 90;
 const numberOfRandomBalls = 33;
 const numberOfBoardCols = 5;
 const numberOfBoardRows = 3;
+const minimumWinScore = 7;
 
 var background;
 var board;
@@ -35,6 +36,9 @@ var boardNumbersArray = [];
 var balls = [];
 var ballsArray = [];
 var randomBallsArray = [];
+var score = 0;
+var scoreText;
+var scoreStyle;
 
 function create() {
     background = game.add.sprite(0, 0, 'background');
@@ -46,12 +50,12 @@ function create() {
 
     buttonPlay = game.add.button(game.width/2, game.height-40, 'buttonPlaySpriteSheet', startGameOnClick, this, 1, 0, 2);
     buttonPlay.anchor.set(0.5);
-
+    
     for (var i = 0; i < numberOfRandomBalls; i++) {
         if (i % 2 == 0) {
             balls[i] = game.add.sprite(-100, 10, 'ballsSpriteSheet');
         } else {
-            balls[i] = game.add.sprite(-100, 50, 'ballsSpriteSheet');
+            balls[i] = game.add.sprite(-100, 44, 'ballsSpriteSheet');
         }
     }
 
@@ -60,12 +64,20 @@ function create() {
     }
 
     randomizeBoard();
+
+    var text = game.add.text(150, game.world.centerY, "YOU WIN BY MAKING\n " + minimumWinScore + " OR MORE POINTS",
+                                { font: "20px Arial", fill: "#fff", align: "center", stroke: '#000', strokeThickness: 6 });
+    text.anchor.set(0.5, 0.5);
+
+    scoreStyle = { font: "60px Arial", fill: "#fff", align: "center", stroke: '#000', strokeThickness: 6 };
+    scoreText = game.add.text(621, game.world.centerY, score.toString(), scoreStyle);
+    scoreText.anchor.set(0.5, 0.5);
 }
 
 function startGameOnClick() {
-    console.log('BUTTON PLAY CLICKED!!!');
-    randomizeBalls();
     buttonPlay.inputEnabled = false;
+    randomizeBalls();
+    tweenMovingBalls();
 }
 
 function randomizeBoard() {
@@ -91,11 +103,13 @@ function randomizeBalls() {
         var index = ballsArray.indexOf(thisNumber);
         ballsArray.splice(index, 1);
     }
-    
+}
+
+function tweenMovingBalls() {
     // Move the sorted balls to right side of the screen after some delay
     for (var i = 0; i < randomBallsArray.length; i++) {
         balls[i].frame = randomBallsArray[i];
-        var tween = game.add.tween(balls[i]).to( { x: game.width - (21 * (i+3.5)) }, 200, "Linear", true, i*300);
+        var tween = game.add.tween(balls[i]).to( { x: game.width - (21 * (i+3.5)) }, 400, "Linear", true, i*500);
         tween.onComplete.add(checkBallAndBoardNumber, this);
         //tween[i].onComplete.add(function() { checkBallAndBoardNumber(balls[i].frame); }, this)
     }
@@ -104,12 +118,17 @@ function randomizeBalls() {
 var count = 0;
 function checkBallAndBoardNumber() {
     var foundStyle = { font: "20px Arial", fill: "#66ff00", align: "center", stroke: '#000', strokeThickness: 6 };
-    
+
+    var resultVictoryStyle = { font: "36px Arial", fill: "#66ff00", align: "center", stroke: '#000', strokeThickness: 6 };
+    var resultDefeatStyle = { font: "36px Arial", fill: "#ff3300", align: "center", stroke: '#000', strokeThickness: 6 };
+
     // Compare ball number with board
     for(var i = 0; i < boardNumbersArray.length; i++) {
         if (boardNumbersArray[i].text == (balls[count].frame + 1).toString()) {
             console.log("IS ON BOARD = " + (balls[count].frame + 1).toString());
             boardNumbersArray[i].setStyle(foundStyle);
+            score++;
+            scoreText.text = score;
             break;
         }
     }
@@ -117,14 +136,20 @@ function checkBallAndBoardNumber() {
     count++;
 
     if (count >= 33) {
-        console.log("FINISHED BALLS CHECKING");
-        game.time.events.add(Phaser.Timer.SECOND * 3, restartGame, this);
+        console.log("FINISHED BALLS CHECKING | FINAL SCORE = " + score);
+        if (score >= minimumWinScore) {
+            var resultText = game.add.text(game.world.centerX, game.world.centerY - 85, "YOU WON", resultVictoryStyle);
+            resultText.anchor.set(0.5);
+        } else {
+            var resultText = game.add.text(game.world.centerX, game.world.centerY - 85, "YOU LOSE", resultDefeatStyle);
+            resultText.anchor.set(0.5);
+        }
+        
+        game.time.events.add(Phaser.Timer.SECOND * 2, restartGame, this);
     }
 }
 
 function restartGame() {
-    console.log("RESTART");
-
     //game.state.restart();
     //game.world.removeAll();
     //game.state.start(game.state.current);
