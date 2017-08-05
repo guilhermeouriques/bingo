@@ -18,54 +18,121 @@ var game = new Phaser.Game(768, 432, Phaser.AUTO, '', { preload: preload, create
 
 function preload() {
     game.load.image('background', 'assets/background.jpg');
+    game.load.image('board', 'assets/board.png');
     game.load.spritesheet('buttonPlaySpriteSheet', 'assets/btn_play_sprite_sheet.png', 100, 61);
-    game.load.spritesheet('ballsSpriteSheet', 'assets/balls_sprite_sheet.png', 44.5, 46);
+    game.load.spritesheet('ballsSpriteSheet', 'assets/balls_sprite_sheet.png', 44, 46);
 }
 
+const totalNumberOfBalls = 90;
+const numberOfRandomBalls = 33;
+const numberOfBoardCols = 5;
+const numberOfBoardRows = 3;
+
 var background;
+var board;
 var buttonPlay;
-var ball;
-var ballsArray = new Array();
-var randomBallsArray = new Array();
+var boardNumbersArray = [];
+var balls = [];
+var ballsArray = [];
+var randomBallsArray = [];
 
 function create() {
-    console.log('FUNCTION CREATE');
-
     background = game.add.sprite(0, 0, 'background');
     background.width = game.width;
     background.height = game.height;
 
-    buttonPlay = game.add.button(game.width/2 - 50, game.height - 61, 'buttonPlaySpriteSheet', startGameOnClick, this, 1, 0, 2);
+    board = game.add.sprite(game.world.centerX, game.world.centerY, 'board');
+    board.anchor.set(0.5);
 
-    ball = game.add.sprite(10, 10, 'ballsSpriteSheet');
-    ball.frame = 89;
+    buttonPlay = game.add.button(game.width/2, game.height-40, 'buttonPlaySpriteSheet', startGameOnClick, this, 1, 0, 2);
+    buttonPlay.anchor.set(0.5);
 
-    for (var i = 0; i < 90; i++) {
+    for (var i = 0; i < numberOfRandomBalls; i++) {
+        if (i % 2 == 0) {
+            balls[i] = game.add.sprite(-100, 10, 'ballsSpriteSheet');
+        } else {
+            balls[i] = game.add.sprite(-100, 50, 'ballsSpriteSheet');
+        }
+    }
+
+    for (var i = 0; i < totalNumberOfBalls; i++) {
         ballsArray.push(i);
     }
+
+    randomizeBoard();
 }
 
 function startGameOnClick() {
     console.log('BUTTON PLAY CLICKED!!!');
-
-    sortBalls();
+    randomizeBalls();
     buttonPlay.inputEnabled = false;
 }
 
-function sortBalls() {
-    for (var i = 0; i < 10; i++) {
+function randomizeBoard() {
+    var style = { font: "20px Arial", fill: "#000", align: "center" };
+    var cloneArray = ballsArray.slice(0);
+    for (var i = 0; i < numberOfBoardRows*5; i+=5) {
+        for (var j = 0; j < numberOfBoardCols; j++) {
+            var randomPosition = game.rnd.integerInRange(0, cloneArray.length - 1);
+            var thisNumber = cloneArray[randomPosition];
+            var index = cloneArray.indexOf(thisNumber);
+            cloneArray.splice(index, 1);
+            boardNumbersArray[i+j] = game.add.text(312+j*36, 182+(i/5)*36, thisNumber, style);
+            boardNumbersArray[i+j].anchor.set(0.5);
+        }
+    }
+}
+
+function randomizeBalls() {
+    for (var i = 0; i < numberOfRandomBalls; i++) {
         var randomPosition = game.rnd.integerInRange(0, ballsArray.length - 1);
         var thisNumber = ballsArray[randomPosition];
         randomBallsArray.push(thisNumber);
         var index = ballsArray.indexOf(thisNumber);
         ballsArray.splice(index, 1);
     }
-    console.log(randomBallsArray);
-    console.log(ballsArray);
+    
+    // Move the sorted balls to right side of the screen after some delay
+    for (var i = 0; i < randomBallsArray.length; i++) {
+        balls[i].frame = randomBallsArray[i];
+        var tween = game.add.tween(balls[i]).to( { x: game.width - (21 * (i+3.5)) }, 200, "Linear", true, i*300);
+        tween.onComplete.add(checkBallAndBoardNumber, this);
+        //tween[i].onComplete.add(function() { checkBallAndBoardNumber(balls[i].frame); }, this)
+    }
+}
+
+var count = 0;
+function checkBallAndBoardNumber() {
+    var foundStyle = { font: "20px Arial", fill: "#66ff00", align: "center", stroke: '#000', strokeThickness: 6 };
+    
+    // Compare ball number with board
+    for(var i = 0; i < boardNumbersArray.length; i++) {
+        if (boardNumbersArray[i].text == (balls[count].frame + 1).toString()) {
+            console.log("IS ON BOARD = " + (balls[count].frame + 1).toString());
+            boardNumbersArray[i].setStyle(foundStyle);
+            break;
+        }
+    }
+
+    count++;
+
+    if (count >= 33) {
+        console.log("FINISHED BALLS CHECKING");
+        game.time.events.add(Phaser.Timer.SECOND * 3, restartGame, this);
+    }
+}
+
+function restartGame() {
+    console.log("RESTART");
+
+    //game.state.restart();
+    //game.world.removeAll();
+    //game.state.start(game.state.current);
+    
+    window.location.reload(false); 
 }
 
 function update() {
-    //console.log('FUNCTION UPDATE');
 }
 
 </script>
